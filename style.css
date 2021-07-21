@@ -81,24 +81,53 @@ h2 {
 }
 
 .foto {
-	width: 100%;
+	width: 100%
 }
 
 .foto img {
-	display: block;
 	width: 100%;
-	height: auto;
+}
+
+.galerie {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%		
 }
 
 /* ------------- pod čáru přijdou tvé styly ------------- */
 
 /*
 Zařiď, aby se fotogalerie měnila tak, že pro různou šířku prohlížeče je na jednom řádku jiný počet obrázků vedle sebe.
-
-okno prohlížeče:
-< 400px - 1 obrázek na řádku (= mobil)
-> 400px - 2 obrázky vedle sebe
-> 600px - 3 obrázky vedle sebe
-> 800px - 4 obrázky vedle sebe
-> 1000px - 6 obrázky vedle sebe
 */
+/* okno prohlížeče: */
+/*< 400px - 1 obrázek na řádku (= mobil)*/
+@media (max-width: 399px) {
+	.foto img {
+		display: block;
+	}
+}
+/* > 400px - 2 obrázky vedle sebe */
+@media (min-width: 400px) and (max-width: 599px) {
+	.foto {
+		width: 50%;
+	}
+}
+/* > 600px - 3 obrázky vedle sebe */
+@media (min-width: 600px) and (max-width: 799px) {
+	.foto {
+		position: block;
+		width: 33.33%; 
+	}
+}
+/* > 800px - 4 obrázky vedle sebe */
+@media (min-width: 800px) and (max-width: 999px) {
+	.foto {
+		width: 25%;
+	}
+}
+/* > 1000px - 6 obrázky vedle sebe */
+@media (min-width: 1000px) {
+	.foto {
+		width: 16.66%;
+	}
+}
