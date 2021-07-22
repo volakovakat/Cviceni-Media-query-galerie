@@ -107,20 +107,19 @@ Zařiď, aby se fotogalerie měnila tak, že pro různou šířku prohlížeče 
 	}
 }
 /* > 400px - 2 obrázky vedle sebe */
-@media (min-width: 400px) and (max-width: 599px) {
+@media (min-width: 400px) {
 	.foto {
 		width: 50%;
 	}
 }
 /* > 600px - 3 obrázky vedle sebe */
-@media (min-width: 600px) and (max-width: 799px) {
+@media (min-width: 600px) {
 	.foto {
-		position: block;
-		width: 33.33%; 
+		width: calc(100% /3); 
 	}
 }
 /* > 800px - 4 obrázky vedle sebe */
-@media (min-width: 800px) and (max-width: 999px) {
+@media (min-width: 800px) {
 	.foto {
 		width: 25%;
 	}
@@ -128,6 +127,6 @@ Zařiď, aby se fotogalerie měnila tak, že pro různou šířku prohlížeče 
 /* > 1000px - 6 obrázky vedle sebe */
 @media (min-width: 1000px) {
 	.foto {
-		width: 16.66%;
+		width: calc(100% /6);
 	}
 }
